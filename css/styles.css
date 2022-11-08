@@ -21,6 +21,7 @@ body {
 	font-family: var(--main-font);
 	font-size: 14px;
 	letter-spacing: 0.03em;
+	padding-top: 80px;
 }
 
 a {
@@ -127,8 +128,15 @@ button {
 /*-----------header--------------*/
 
 .page-header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	min-height: 80px;
+	background-color: var(--background-color);
 	border-bottom: 1px solid rgba(236, 236, 236, 1);
 }
+
 .page-header .container {
 	display: flex;
 	align-items: center;
@@ -138,7 +146,9 @@ button {
 	display: flex;
 	gap: 50px;
 }
+
 .nav-items {
+	position: relative;
 	padding-top: 32px;
 	padding-bottom: 32px;
 }
@@ -159,6 +169,18 @@ button {
 
 .current {
 	color: var(--acent-color);
+}
+
+.current::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	left: 0;
+	bottom: 0;
+	border-radius: 2px;
+
+	background: #2196f3;
 }
 
 .auth-list {
@@ -282,6 +304,7 @@ button {
 	padding-top: 0;
 	padding-bottom: 94px;
 }
+
 .work-list {
 	position: relative;
 	display: flex;
@@ -302,6 +325,61 @@ button {
 	text-transform: uppercase;
 	color: #ffffff;
 }
+
+/* .work-list {
+	position: relative;
+	margin-right: 15px;
+
+	display: flex;
+	gap: 30px;
+
+	padding: 0;
+	margin: 0;
+}
+.work-list:hover .submenu {
+	display: block;
+}
+.work-link {
+	display: block;
+	padding: 27px;
+
+	text-decoration: none;
+	position: absolute;
+	width: 100%;
+	height: 70px;
+	bottom: 0;
+	background: rgba(47, 48, 58, 0.8);
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.14;
+	text-align: center;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+.submenu {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 100%;
+
+	margin: 0;
+	list-style: none;
+	padding: 10px;
+
+	background-color: rgba(171, 172, 181, 0.8);
+}
+.submenu-item {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.15;
+	letter-spacing: 0.02em;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+} */
 
 /*----------------------Команда-----------------*/
 
@@ -601,13 +679,14 @@ address {
 	opacity: 0;
 	pointer-events: none;
 }
-/*----iis-hidden не работает
-видео Репеты с 1:22----*/
 
 .modal {
 	position: absolute;
-	top: 25%;
+	top: 15%;
 	left: 35%;
+	/* top: 50%;
+	left: 50%;
+    transform: translate (-50%, -50%);  не работает*/
 
 	min-height: 581px;
 	min-width: 528px;
