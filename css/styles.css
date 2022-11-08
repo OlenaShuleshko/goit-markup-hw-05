@@ -283,8 +283,24 @@ button {
 	padding-bottom: 94px;
 }
 .work-list {
+	position: relative;
 	display: flex;
 	gap: 30px;
+}
+
+.work-btn {
+	position: absolute;
+	width: 100%;
+	height: 70px;
+	bottom: 0;
+	background: rgba(47, 48, 58, 0.8);
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.14;
+	text-align: center;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: #ffffff;
 }
 
 /*----------------------Команда-----------------*/
@@ -494,7 +510,6 @@ address {
 
 .portfolio-link {
 	display: block;
-
 	transition-property: box-shadow;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -527,4 +542,69 @@ address {
 	font-size: 16px;
 	line-height: 1.8;
 	letter-spacing: 0.03em;
+}
+
+.portfolio-thumb {
+	position: relative;
+}
+
+.portfolio-thumb::before {
+	display: inline-block;
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(33, 150, 243, 0.9);
+
+	opacity: 0;
+}
+
+.portfolio-thumb:hover::before {
+	opacity: 1;
+}
+
+.portfolio-action {
+	position: absolute;
+	bottom: 0;
+	margin: 63px 24px;
+	opacity: 0;
+	/*--top: 50%;
+	left: 50%;
+	transform: translate(-50% -50%);
+	не розумію чого не працює як треба--*/
+}
+
+.portfolio-action:hover {
+	opacity: 1;
+}
+.portfolio-content {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.56;
+	letter-spacing: 0.03em;
+	color: #ffffff;
+}
+
+/*-------Модальне вікно--------*/
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+.modal {
+	width: 528px;
+	height: 581px;
+	background-color: #ffffff;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50% -50%);
 }
