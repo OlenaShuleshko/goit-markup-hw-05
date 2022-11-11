@@ -130,7 +130,7 @@ button {
 
 /*-----------header--------------*/
 
-.page-header {
+.header {
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -141,7 +141,7 @@ button {
 	z-index: var(--header-idx);
 }
 
-.page-header .container {
+.header .container {
 	display: flex;
 	align-items: center;
 }
