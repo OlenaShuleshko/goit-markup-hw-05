@@ -321,8 +321,9 @@ button {
 	gap: 30px;
 }
 
-.work-btn {
+.work-text {
 	position: absolute;
+	padding-top: 27px;
 	width: 100%;
 	height: 70px;
 	bottom: 0;
